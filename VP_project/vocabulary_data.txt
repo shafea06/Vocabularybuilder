@@ -1,0 +1,3 @@
+Implement|ينفذ / يطبق|We will implement the code.|false
+Crucial|حاسم / مهم جداً|Time is crucial right now.|false
+Innovative|مبتكر / إبداعي|He is an innovative student.|false
