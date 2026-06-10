@@ -9,12 +9,7 @@ public class JframeQuiz extends javax.swing.JFrame {
 
     private JFrameDashborad dashboardRef;
  
-    // -------------------------------------------------------------------------
-    // CONSTRUCTORS
-    // -------------------------------------------------------------------------
- 
-    // FIX #2 (Clean Code): No-arg constructor made private — it can never work
-    //         correctly without a tableModel, so it must not be callable externally.
+    
     private JframeQuiz(DefaultTableModel tableModel1) {
         initComponents();
         btnForgot.setVisible(false);
@@ -22,9 +17,7 @@ public class JframeQuiz extends javax.swing.JFrame {
         lblMean.setText("");
     }
  
-    // FIX #3 (Bug): Replaced the broken stub constructor that threw
-    //         UnsupportedOperationException with a proper implementation.
-    //         dashboardRef is stored so saveDataToFile() can be called later.
+  
     public JframeQuiz(javax.swing.table.DefaultTableModel model, JFrameDashborad dashboard) {
         initComponents();
         this.tableModel   = model;
@@ -56,7 +49,7 @@ public class JframeQuiz extends javax.swing.JFrame {
     }
  
     private void showNextWord() {
-        // FIX #4 (Bug): Added null check on quizIndices (was already present — confirmed safe)
+       
         if (quizIndices != null && currentQuizPosition < quizIndices.size()) {
             int actualRowIndex = quizIndices.get(currentQuizPosition);
             Object wordObj = tableModel.getValueAt(actualRowIndex, 0);

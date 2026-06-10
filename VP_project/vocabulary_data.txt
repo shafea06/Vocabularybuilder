@@ -1,3 +1,10 @@
-Implement|ينفذ / يطبق|We will implement the code.|false
-Crucial|حاسم / مهم جداً|Time is crucial right now.|false
+Verify|يتحقق من / يثبت صحة|Please verify your email address to complete the registration process|true
+Modify|يُعدّل / يُغيّر|We had to modify the code to fix the unexpected errors|true
+Evaluate|يُقيّم / يقدّر|.The teacher will evaluate the students' projects next week|true
+Detect|يكتشف / يلاحظ|.The artificial intelligence model is trained to detect specific objects in real-time|true
+Integrate|يدمج|The project requires us to integrate multiple sensors into one smart system|true
+Optimize|يُحسّن|I need to optimize the computer's settings to get the highest frame rate|true
+Efficient|فعّال \كفء||true
+Implement|ينفذ / يطبق|We will implement the code.|true
+Crucial|حاسم / مهم جداً|Time is crucial right now.|true
 Innovative|مبتكر / إبداعي|He is an innovative student.|true

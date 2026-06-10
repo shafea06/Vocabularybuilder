@@ -115,7 +115,7 @@
                               <Component id="lblSortby" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="boxsortby" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="791" max="32767" attributes="0"/>
                               <Component id="btnDelete" min="-2" pref="72" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="btnAddWord" min="-2" pref="85" max="-2" attributes="0"/>
@@ -126,8 +126,8 @@
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Scrollpan" min="-2" pref="996" max="-2" attributes="0"/>
-                          <EmptySpace pref="180" max="32767" attributes="0"/>
+                          <Component id="Scrollpan" pref="1166" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -154,7 +154,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
                           <Component id="Scrollpan" min="-2" pref="333" max="-2" attributes="0"/>
-                          <EmptySpace pref="20" max="32767" attributes="0"/>
+                          <EmptySpace pref="26" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>

@@ -4,7 +4,7 @@ public class JFrameDashborad extends javax.swing.JFrame {
      private void loadDataFromFile() {
         java.io.File file = new java.io.File(VOCAB_FILE);
         TableMeaning.setModel(new javax.swing.table.DefaultTableModel(
-    new Object[][] {},          // ← empty, no sample data
+    new Object[][] {},          
     new String[]{"Word", " Meaning ", "Example", "Memorized"})   {
         
     Class[] types = { Object.class, Object.class, Object.class, Boolean.class };
@@ -19,7 +19,7 @@ public class JFrameDashborad extends javax.swing.JFrame {
             try (java.io.BufferedReader br = new java.io.BufferedReader(new java.io.FileReader(file))) {
                 javax.swing.table.DefaultTableModel model =
                     (javax.swing.table.DefaultTableModel) TableMeaning.getModel();
-                model.setRowCount(0); // clear existing rows before loading
+                model.setRowCount(0); 
  
                 String line;
                 while ((line = br.readLine()) != null) {
@@ -59,9 +59,7 @@ public class JFrameDashborad extends javax.swing.JFrame {
         }
     }
  
-    // -------------------------------------------------------------------------
-    // CONSTRUCTOR
-    // -------------------------------------------------------------------------
+    
  
     public JFrameDashborad() {
         initComponents();
@@ -70,6 +68,31 @@ public class JFrameDashborad extends javax.swing.JFrame {
         TableMeaning.setRowSorter(
             new javax.swing.table.TableRowSorter<>(
                 (javax.swing.table.DefaultTableModel) TableMeaning.getModel()));
+        TableMeaning.getColumnModel().getColumn(2).setCellRenderer(new javax.swing.table.DefaultTableCellRenderer() {
+    private final javax.swing.JTextArea textArea = new javax.swing.JTextArea();
+    {
+        textArea.setLineWrap(true);      
+        textArea.setWrapStyleWord(true); 
+        textArea.setOpaque(true);
+    }
+    @Override
+    public java.awt.Component getTableCellRendererComponent(javax.swing.JTable table, Object value,
+            boolean isSelected, boolean hasFocus, int row, int column) {
+        
+        textArea.setText(value != null ? value.toString() : "");
+        textArea.setFont(table.getFont());
+        
+        
+        if (isSelected) {
+            textArea.setBackground(table.getSelectionBackground());
+            textArea.setForeground(table.getSelectionForeground());
+        } else {
+            textArea.setBackground(table.getBackground());
+            textArea.setForeground(table.getForeground());
+        }
+        return textArea;
+    }
+});
         
     }
  
@@ -199,7 +222,7 @@ public class JFrameDashborad extends javax.swing.JFrame {
                         .addComponent(lblSortby)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(boxsortby, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 791, Short.MAX_VALUE)
                         .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnAddWord, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -207,8 +230,8 @@ public class JFrameDashborad extends javax.swing.JFrame {
             .addGroup(pnlMAinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnlMAinLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(Scrollpan, javax.swing.GroupLayout.PREFERRED_SIZE, 996, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(180, Short.MAX_VALUE)))
+                    .addComponent(Scrollpan, javax.swing.GroupLayout.DEFAULT_SIZE, 1166, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         pnlMAinLayout.setVerticalGroup(
             pnlMAinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -228,7 +251,7 @@ public class JFrameDashborad extends javax.swing.JFrame {
                 .addGroup(pnlMAinLayout.createSequentialGroup()
                     .addGap(123, 123, 123)
                     .addComponent(Scrollpan, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(20, Short.MAX_VALUE)))
+                    .addContainerGap(26, Short.MAX_VALUE)))
         );
 
         pnlMAinLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAddWord, btnDelete});
