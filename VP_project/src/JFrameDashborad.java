@@ -65,12 +65,12 @@ public class JFrameDashborad extends javax.swing.JFrame {
  
     public JFrameDashborad() {
         initComponents();
-       
+       loadDataFromFile();
        
         TableMeaning.setRowSorter(
             new javax.swing.table.TableRowSorter<>(
                 (javax.swing.table.DefaultTableModel) TableMeaning.getModel()));
-        loadDataFromFile();
+        
     }
  
 
@@ -216,12 +216,13 @@ public class JFrameDashborad extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lblMyVocabulary)
                 .addGap(18, 18, 18)
-                .addGroup(pnlMAinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(boxsortby, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblSortby)
+                .addGroup(pnlMAinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlMAinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnAddWord)
-                        .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlMAinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(boxsortby, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblSortby)))
                 .addContainerGap(399, Short.MAX_VALUE))
             .addGroup(pnlMAinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnlMAinLayout.createSequentialGroup()
@@ -533,6 +534,7 @@ public class JFrameDashborad extends javax.swing.JFrame {
 
       
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new JFrameDashborad().setVisible(true);
             }
