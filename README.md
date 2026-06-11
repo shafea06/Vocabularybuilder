@@ -37,4 +37,4 @@ A simple, interactive, and lightweight desktop application designed to help lear
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone (https://github.com/shafea06/Vocabularybuilder/blob/main/README.mdس)
+   git clone (https://github.com/shafea06/Vocabularybuilder/blob/main/README.md)
